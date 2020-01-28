@@ -7,7 +7,9 @@ var server = http.Server(app);
 
 app.use(express.static('client'));
 
-app.get("/hello",(req))
+app.get("/hello",(req,res)=>{
+    res.send("Hi!")
+})
 
 server.listen(PORT, function() {
   console.log('Chat server running');
